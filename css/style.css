@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    background-color: #333;
+    color: #fff;
+}
+
+html,body{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+h1{
+    text-align: center;
+    letter-spacing: 0.2em;
+    font-size: 5em;
+}
+.container{
+    max-width: 90%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 -2%;
+  }
+  
+  .pokemon {
+    transition: 400ms 200ms ease-in-out;
+    width: calc(20% - 4%);
+    margin: 2% 2%;
+    padding: 2%;
+    background-color: rgba(255,255,255,0.1);
+    border: 5px solid #f00;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+.pokemon:hover{
+    transform: translateY(-0.5em);
+    margin-top: 1em;
+}
+.pokemon:hover > .info{
+  opacity: 1;
+}
+.pokemon:hover > .img-container{
+  transform: scale(1.0);
+}
+  .img-container {
+    background-color: transparent;
+    margin-bottom: 5%;
+    transition: 600ms ease-in-out;
+    transform: scale(1.5);
+  }
+  
+  .img-container img {
+    max-width: 100%;
+    background-color: transparent;
+
+  }
+  
+  .number {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 2.5%;
+  }
+  
+  .name {
+    font-size: 1.125rem;
+  }
+  
+  .info{
+    opacity: 0;
+    transition: 400ms ease-in-out;
+  }
+  .info,.info .number, .info .name{
+    background-color: transparent;
+  }
+
+  
+  @media screen and (max-width: 648px) {
+    .pokemon {
+      width: 45%;
+    }
+  }
+  @media screen and (max-width:466px) {
+
+  *{
+    font-size:0.75em;
+  }
+  }
+
+  @media screen and (min-width: 648px) {
+    .pokemon {
+      width: calc(25% - 4%);
+    }
+  }
+  
+  @media screen and (min-width: 992px) {
+    .pokemon {
+      width: calc(20% - 4%);
+    }
+  }
